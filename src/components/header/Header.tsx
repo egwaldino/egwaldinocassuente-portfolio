@@ -4,21 +4,22 @@ import type { JSX } from "react";
 export function Header(): JSX.Element {
   return (
     <Flex
-      as="nav"
       w="full"
-      h="16"
-     
+      h="full"
+      py="32px"
       justify="center"
     >
       <Flex
-        w="120"
+        h="42px"
+        px="32px"
+        py="24px"
+        gap="24px"
+        rounded="lg"
         align="center"
-        justify="space-between"
         bg="#0C0E23"
-        rounded="2xl"
         border="1px solid"
+        justify="space-between"
         borderColor="gray.100/10"
-        px="15"
       >
         <Link href="/">Sobre</Link>
         <Link href="/">Projetos</Link>
