@@ -8,7 +8,7 @@ import Vite from "@/assets/vite.svg"
 import NextJS from "@/assets/nextjs.svg"
 import ChakraUI from "@/assets/chakraui.svg"
 import Git from "@/assets/git.svg"
-import ReactJS from "@/assets/reactjs.svg"
+//import ReactJS from "@/assets/reactjs.svg"
 
 const softSkills = [
     {
@@ -51,7 +51,7 @@ const hardSkills = [
     { name: "Next.js", icon: NextJS, color: "#ffffff" },
     { name: "Chakra UI", icon: ChakraUI, color: "#319795" },
     { name: "Git", icon: Git, color: "#DD2C00" },
-    { name: "React JS", icon: ReactJS, color: "#61DAFB" },
+    //{ name: "React JS", icon: ReactJS, color: "#61DAFB" },
 ];
 
 
@@ -152,7 +152,9 @@ export function AboutSection() {
                 <Flex
                     w={"20rem"}
                     align="center"
+                    justify={"center"}
                     flexDir="column"
+
                 >
                     <Heading fontWeight="bold" fontSize="3xl">Hard Skills</Heading>
                     <Grid
@@ -161,25 +163,25 @@ export function AboutSection() {
                             md: "repeat(8, 1fr)",
                             lg: "repeat(8, 1fr)",
                         }}
-                        gap={7}
+                        gap={6}
                         justifyItems="center"
                         py={16}
                         px={4}
-
+                        overflow={"hidden"}
                     >
                         {hardSkills.map((tech) => (
                             <Button
                                 bgColor="#fff"
-                                bgGradient="to-tl" 
-                                gradientFrom="#04071D" 
-                                gradientTo="#0C0E23" 
-                                rounded={"xl"} 
-                                w={"10rem"} 
-                                h={"8rem"}  
-                                border="0.5px solid" 
-                                borderColor="whiteAlpha.100" 
-                                direction="column" 
-                                textAlign="center" 
+                                bgGradient="to-tl"
+                                gradientFrom="#04071D"
+                                gradientTo="#0C0E23"
+                                rounded={"xl"}
+                                w={"10rem"}
+                                h={"8rem"}
+                                border="0.5px solid"
+                                borderColor="whiteAlpha.100"
+                                direction="column"
+                                textAlign="center"
                                 gap={4}
                                 key={tech.name}
                                 variant="ghost"
