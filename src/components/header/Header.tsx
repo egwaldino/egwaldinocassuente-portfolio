@@ -1,4 +1,4 @@
-import { Flex, Link } from "@chakra-ui/react";
+import { Button, Flex, Link } from "@chakra-ui/react";
 import type { JSX } from "react";
 
 export function Header(): JSX.Element {
@@ -13,7 +13,6 @@ export function Header(): JSX.Element {
         h="42px"
         px="32px"
         py="24px"
-        gap="24px"
         rounded="lg"
         align="center"
         bg="#0C0E23"
@@ -21,10 +20,54 @@ export function Header(): JSX.Element {
         justify="space-between"
         borderColor="gray.100/10"
       >
-        <Link href="/">Sobre</Link>
-        <Link href="/">Projetos</Link>
-        <Link href="/">Depoimentos</Link>
-        <Link href="/">Contatos</Link>
+        <Link textDecor="none" rel="noopener noreferrer">
+          <Button
+            bgColor="transparent"
+            color="white"
+            onClick={() => {
+              const section = document.getElementById("about-section");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >Sobre</Button>
+        </Link>
+        <Link textDecor="none" rel="noopener noreferrer">
+          <Button
+            bgColor="transparent"
+            color="white"
+            onClick={() => {
+              const section = document.getElementById("projects-section");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >Projetos</Button>
+        </Link>
+        <Link textDecor="none" rel="noopener noreferrer">
+          <Button
+            bgColor="transparent"
+            color="white"
+            onClick={() => {
+              const section = document.getElementById("testimonials-section");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >Depoimentos</Button>
+        </Link>
+        <Link textDecor="none" rel="noopener noreferrer">
+          <Button
+            bgColor="transparent"
+            color="white"
+            onClick={() => {
+              const section = document.getElementById("contacts-section");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >Contatos</Button>
+        </Link>
       </Flex>
     </Flex>
   );

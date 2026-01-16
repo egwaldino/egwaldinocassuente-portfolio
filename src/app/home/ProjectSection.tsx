@@ -1,6 +1,10 @@
 import { Grid, Box, Heading, Span } from "@chakra-ui/react";
 import { ProjectCard } from "@/components/ProjectCard";
 import Astromei from "@/assets/siteastromei.png"
+import BernardoCassuende from "@/assets/sitebernardocassuende.png"
+import HealthCareAngola from "@/assets/sitehealthcareangola.png"
+import Codrillo from "@/assets/webappcodrillo.png"
+import Brevemente from "@/assets/appbrevemente.png"
 import Typescript from "@/assets/typescript.svg"
 import Firebase from "@/assets/firebase.svg"
 import Vite from "@/assets/vite.svg"
@@ -10,9 +14,9 @@ import ReactJS from "@/assets/reactjs.svg"
 const projects = [
   {
     image: Astromei,
-    title: "Portfolio de Fotografo Astromei",
+    title: "Website do Fotografo Astromei",
     description:
-      "Criado para os seus clientes e pré clientes verem os seus serviços, trabalhos feitos e entrarem em contacto.",
+      "Desenvolvido para apresentar os serviços fotográficos, trabalhos realizados e facilitar o contacto com clientes e potenciais interessados.",
     techIcons: [
       Typescript,
       ReactJS,
@@ -23,10 +27,10 @@ const projects = [
     url: "https://astromei-portfolio.web.app/",
   },
   {
-    image: Astromei,
-    title: "Portfolio de Fotografo Astromei",
+    image: BernardoCassuende,
+    title: "Website do Psicólogo Bernardo",
     description:
-      "Criado para os seus clientes e pré clientes verem os seus serviços, trabalhos feitos e entrarem em contacto.",
+      "Desenvolvido para apoiar pacientes no agendamento de consultas e permitir um contacto direto, simples e profissional com o psicólogo.",
     techIcons: [
       Typescript,
       ReactJS,
@@ -34,13 +38,13 @@ const projects = [
       Vite,
       ChakraUI,
     ],
-    url: "https://astromei-portfolio.web.app/",
+    url: "https://bernardo-cassuende.web.app/",
   },
   {
-    image: Astromei,
-    title: "Portfolio de Fotografo Astromei",
+    image: HealthCareAngola,
+    title: "Website da Health Care Angola",
     description:
-      "Criado para os seus clientes e pré clientes verem os seus serviços, trabalhos feitos e entrarem em contacto.",
+      "Desenvolvida para apresentar os serviços de medicina domiciliar, esclarecer informações e facilitar o contacto com novos clientes.",
     techIcons: [
       Typescript,
       ReactJS,
@@ -48,43 +52,52 @@ const projects = [
       Vite,
       ChakraUI,
     ],
-    url: "https://astromei-portfolio.web.app/",
+    url: "https://healthcare-angola.web.app/",
   },
   {
-    image: Astromei,
-    title: "Portfolio de Fotografo Astromei",
+    image: Codrillo,
+    title: "A Compilar... [Aplicação Web Codrillo]",
     description:
-      "Criado para os seus clientes e pré clientes verem os seus serviços, trabalhos feitos e entrarem em contacto.",
+      "Os ingredientes são bons, só falta o tempo certo. Disponível em breve.",
     techIcons: [
       Typescript,
       ReactJS,
-      Firebase,
       Vite,
       ChakraUI,
     ],
-    url: "https://astromei-portfolio.web.app/",
   },
   {
-    image: Astromei,
-    title: "Portfolio de Fotografo Astromei",
+    image: Brevemente,
+    title: "A Compilar...",
     description:
-      "Criado para os seus clientes e pré clientes verem os seus serviços, trabalhos feitos e entrarem em contacto.",
+      "Os ingredientes são bons, só falta o tempo certo. Disponível em breve.",
     techIcons: [
       Typescript,
       ReactJS,
-      Firebase,
       Vite,
       ChakraUI,
     ],
-    url: "https://astromei-portfolio.web.app/",
   },
+  {
+    image: Brevemente,
+    title: "A Compilar...",
+    description:
+      "Os ingredientes são bons, só falta o tempo certo. Disponível em breve.",
+    techIcons: [
+      Typescript,
+      ReactJS,
+      Vite,
+      ChakraUI,
+    ],
+  },
+  
 ];
 
 export function ProjectsSection() {
   return (
-    <Box w="full" py={24} bgColor="#000319">
-      <Heading fontWeight={"bold"} fontSize={"4xl"} mb={12} textAlign="center">
-        Uma pequena seleção <Span>dos meus projetos</Span>
+    <Box id="projects-section" w="full" px={24} py={24} bgColor="#000319">
+      <Heading fontWeight={"semibold"} fontSize={"3xl"} mb={12} textAlign="center">
+        Uma pequena seleção <Span color="#CBACF9">dos meus projetos</Span>
       </Heading>
 
       <Grid

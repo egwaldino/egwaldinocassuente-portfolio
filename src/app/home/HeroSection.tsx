@@ -3,7 +3,7 @@ import BgHero from "@/assets/bg-about.png"
 import OverlayImage from "@/assets/bg-hero.png"
 import { HiArrowUpRight } from "react-icons/hi2";
 import { Header } from "@/components/header/Header";
-import { Flex, Image, Text, Heading, Button, Box } from "@chakra-ui/react";
+import { Flex, Image, Text, Heading, Button, Box, Link } from "@chakra-ui/react";
 
 export function HeroSection(): JSX.Element {
   return (
@@ -66,24 +66,32 @@ export function HeroSection(): JSX.Element {
           Olá! Eu sou Egwaldino, um Web Developer residente em Portugal
         </Text>
 
-        <Button
-          py={6}
-          px={10}
-          gap={2}
-          rounded="lg"
-          bgGradient="to-r" 
-          gradientFrom="#04071D" 
-          gradientTo="#0C0E23"
-          display="flex"
-          variant="outline"
-          borderColor="gray.100/10"
-          _hover={{
-            bg: "#000319",
-          }}
-        >
-          <HiArrowUpRight />
-          Meus Trabalhos
-        </Button>
+        <Link textDecor="none" rel="noopener noreferrer">
+          <Button
+            py={6}
+            px={10}
+            gap={2}
+            rounded="lg"
+            bgGradient="to-r"
+            gradientFrom="#04071D"
+            gradientTo="#0C0E23"
+            display="flex"
+            variant="outline"
+            borderColor="gray.100/10"
+            _hover={{
+              bg: "#000319",
+            }}
+            onClick={() => {
+              const section = document.getElementById("services-section");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            <HiArrowUpRight />
+            Meus Serviços
+          </Button>
+        </Link>
       </Flex>
     </Box>
   );

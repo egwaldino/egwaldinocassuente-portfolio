@@ -8,7 +8,8 @@ import Vite from "@/assets/vite.svg"
 import NextJS from "@/assets/nextjs.svg"
 import ChakraUI from "@/assets/chakraui.svg"
 import Git from "@/assets/git.svg"
-//import ReactJS from "@/assets/reactjs.svg"
+import { motion } from "framer-motion";
+import ReactJS from "@/assets/reactjs.svg"
 
 const softSkills = [
     {
@@ -51,15 +52,17 @@ const hardSkills = [
     { name: "Next.js", icon: NextJS, color: "#ffffff" },
     { name: "Chakra UI", icon: ChakraUI, color: "#319795" },
     { name: "Git", icon: Git, color: "#DD2C00" },
-    //{ name: "React JS", icon: ReactJS, color: "#61DAFB" },
+    { name: "React JS", icon: ReactJS, color: "#61DAFB" },
 ];
 
+const MotionFlex = motion(Flex);
 
 export function AboutSection() {
+
     return (
         <Stack>
-
             <VStack
+                id="about-section"
                 h={"full"}
                 gap={24}
                 w={"full"}
@@ -106,10 +109,10 @@ export function AboutSection() {
                     />
                 </Flex>
 
-                <Flex flexDir="column">
+                <Flex flexDir="column" pb={20} pt={20}>
                     <HStack>
                         <Flex flexDir="column" align="center">
-                            <Heading fontWeight="bold" fontSize="3xl">Soft Skills</Heading>
+                            <Heading fontWeight="semibold" fontSize="3xl">Soft Skills</Heading>
                             <Grid
                                 templateColumns={{
                                     base: "1fr",
@@ -148,66 +151,59 @@ export function AboutSection() {
                 </Flex>
             </VStack>
 
-            <HStack w="full" justify={"center"} bgColor={"#000319"} mt={-2}>
-                <Flex
-                    w={"20rem"}
-                    align="center"
-                    justify={"center"}
-                    flexDir="column"
+            <HStack
+                w="full"
+                pb={20}
+                overflow="hidden"
+                justify="center"
+                bgColor="#000319"
+                mt={-2}
+            >
+                <Flex flexDir="column" align="center" w="full">
+                    <Heading fontWeight="semibold" fontSize="3xl">
+                        Hard Skills
+                    </Heading>
 
-                >
-                    <Heading fontWeight="bold" fontSize="3xl">Hard Skills</Heading>
-                    <Grid
-                        templateColumns={{
-                            base: "repeat(2, 1fr)",
-                            md: "repeat(8, 1fr)",
-                            lg: "repeat(8, 1fr)",
-                        }}
-                        gap={6}
-                        justifyItems="center"
-                        py={16}
-                        px={4}
-                        overflow={"hidden"}
-                    >
-                        {hardSkills.map((tech) => (
-                            <Button
-                                bgColor="#fff"
-                                bgGradient="to-tl"
-                                gradientFrom="#04071D"
-                                gradientTo="#0C0E23"
-                                rounded={"xl"}
-                                w={"10rem"}
-                                h={"8rem"}
-                                border="0.5px solid"
-                                borderColor="whiteAlpha.100"
-                                direction="column"
-                                textAlign="center"
-                                gap={4}
-                                key={tech.name}
-                                variant="ghost"
-                                /*             _hover={{ bg: "transparent", transform: "translateY(-4px)" }}
-                                            _active={{ bg: "transparent" }} */
-                                p={12}
-                            >
-                                <VStack gap={3}>
-                                    <Image
-                                        src={tech.icon}
-                                        alt={tech.name}
-                                        boxSize="64px"
-                                    />
-                                    <Text
-                                        fontSize="sm"
-                                        fontWeight="bold"
-                                        color={tech.color}
-                                    >
-                                        {tech.name}
-                                    </Text>
-                                </VStack>
-                            </Button>
-                        ))}
-                    </Grid>
+                    {/* Container que corta */}
+                    <Flex w="full" overflow="hidden" mt={12}>
+                        {/* Linha animada */}
+                        <MotionFlex
+                            gap={6}
+                            animate={{ x: ["0%", "-50%"] }}
+                            transition={{
+                                duration: 30,
+                                ease: "linear",
+                                repeat: Infinity,
+                            }}
+                            minW="fit-content"
+                        >
+                            {[...hardSkills, ...hardSkills].map((tech, index) => (
+                                <Button
+                                    key={`${tech.name}-${index}`}
+                                    bgGradient="to-tl"
+                                    gradientFrom="#04071D"
+                                    gradientTo="#0C0E23"
+                                    rounded="xl"
+                                    w="10rem"
+                                    h="8rem"
+                                    border="0.5px solid"
+                                    borderColor="whiteAlpha.100"
+                                    flexShrink={0}
+                                    variant="ghost"
+                                >
+                                    <VStack gap={3}>
+                                        <Image src={tech.icon} alt={tech.name} boxSize="64px" />
+                                        <Text fontSize="sm" fontWeight="bold" color={tech.color}>
+                                            {tech.name}
+                                        </Text>
+                                    </VStack>
+                                </Button>
+                            ))}
+                        </MotionFlex>
+                    </Flex>
                 </Flex>
             </HStack>
+
 
         </Stack>
     )

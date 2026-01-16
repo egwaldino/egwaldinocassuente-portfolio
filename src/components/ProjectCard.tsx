@@ -41,7 +41,7 @@ export function ProjectCard({
       </Text>
 
       <Flex justify="space-between" align="center">
-        <HStack gap={3}>
+        <HStack maxW={"20rem"} gap={3}>
           {techIcons.map((icon, index) => (
             <Image key={index} src={icon} boxSize="20px" />
           ))}
