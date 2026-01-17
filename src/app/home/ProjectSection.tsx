@@ -95,8 +95,8 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <Box id="projects-section" w="full" px={24} py={24} bgColor="#000319">
-      <Heading fontWeight={"semibold"} fontSize={"3xl"} mb={12} textAlign="center">
+    <Box id="projects-section" w="full" px={{ base: 4, md: 24}} py={24} bgColor="#000319">
+      <Heading fontWeight={"semibold"} fontSize={{base: "3xl", md: "3xl"}} mb={12} textAlign="center">
         Uma pequena seleção <Span color="#CBACF9">dos meus projetos</Span>
       </Heading>
 

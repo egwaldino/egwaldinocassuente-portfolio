@@ -3,7 +3,7 @@ import BgHero from "@/assets/bg-about.png"
 import OverlayImage from "@/assets/bg-hero.png"
 import { HiArrowUpRight } from "react-icons/hi2";
 import { Header } from "@/components/header/Header";
-import { Flex, Image, Text, Heading, Button, Box, Link } from "@chakra-ui/react";
+import { Flex, Image, Text, Heading, Button, Box, Link, Span } from "@chakra-ui/react";
 
 export function HeroSection(): JSX.Element {
   return (
@@ -34,16 +34,16 @@ export function HeroSection(): JSX.Element {
       <Header />
 
       <Flex
-        gap={6}
+        gap={{base: 10, md: 6}}
         w="full"
-        mt="32px"
+        mt={{base: "6rem", md: "32px"}}
         as="section"
         align="center"
         direction="column"
         textAlign="center"
       >
         <Text
-          fontSize="sm"
+          fontSize={{base: "xs", md: "sm"}}
           letterSpacing="0.3rem"
           fontWeight="extralight"
         >
@@ -52,8 +52,10 @@ export function HeroSection(): JSX.Element {
 
         <Heading
           as="h1"
-          fontSize="7xl"
+          fontSize={{base: "4xl", md: "7xl"}}
+          textAlign={{base: "center", md: "center"}}
           fontWeight="bold"
+          px={{base: "30px"}}
           lineHeight="shorter"
         >
           Transformando Conceitos em uma Experiência{" "}
@@ -62,8 +64,8 @@ export function HeroSection(): JSX.Element {
           </Text>
         </Heading>
 
-        <Text fontSize="lg">
-          Olá! Eu sou Egwaldino, um Web Developer residente em Portugal
+        <Text fontSize="lg" px={{base: 5}}>
+          Olá! Eu sou <Span fontWeight={"semibold"} color="#CBACF9">Egwaldino,</Span> um Web Developer focado em performance e boas práticas
         </Text>
 
         <Link textDecor="none" rel="noopener noreferrer">

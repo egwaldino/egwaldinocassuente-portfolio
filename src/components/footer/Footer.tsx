@@ -47,7 +47,7 @@ export function Footer() {
                     Entra em contacto comigo hoje e vamos conversar sobre como posso ajudar a alcançar os teus objetivos.
                 </Text>
 
-                <Link href="tel:+351912345678" textDecor="none">
+                <Link href="tel:+351964433241" textDecor="none">
                     <Button
                         mt={4}
                         py={6}
@@ -73,12 +73,13 @@ export function Footer() {
 
             <Flex
                 w="full"
-                justify="space-between"
+                justify={{base: "center", md: "space-between"}}
                 align="center"
                 flexWrap="wrap"
                 gap={4}
-                mt={20}            >
-                <Text fontSize="xs" color="whiteAlpha.500">
+                mt={20}
+            >
+                <Text textAlign={"center"} fontSize="xs" color="whiteAlpha.500">
                     Desenvolvido por Egwaldino Cassuente. © {new Date().getFullYear()} Todos os direitos reservados
                 </Text>
 

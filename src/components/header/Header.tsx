@@ -8,10 +8,11 @@ export function Header(): JSX.Element {
       h="full"
       py="32px"
       justify="center"
+      align="center"
     >
       <Flex
         h="42px"
-        px="32px"
+        px={{base: "", md: "32px"}}
         py="24px"
         rounded="lg"
         align="center"

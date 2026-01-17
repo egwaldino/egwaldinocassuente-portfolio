@@ -1,5 +1,5 @@
 import BgHero from "@/assets/bg-about.png"
-import { Flex, VStack, Image, Heading, Text, Stack, HStack, GridItem, Grid, Button } from "@chakra-ui/react";
+import { Flex, VStack, Image, Link, Icon, Heading, Text, Stack, HStack, GridItem, Grid, Button } from "@chakra-ui/react";
 import EgwaldinoCassuente from "@/assets/egwaldino-cassuente.png"
 import Typescript from "@/assets/typescript.svg"
 import TailwindCSS from "@/assets/tailwindcss.svg"
@@ -10,6 +10,14 @@ import ChakraUI from "@/assets/chakraui.svg"
 import Git from "@/assets/git.svg"
 import { motion } from "framer-motion";
 import ReactJS from "@/assets/reactjs.svg"
+import { FaWhatsapp } from "react-icons/fa";
+import {
+    FiInstagram,
+    FiGithub,
+    FiLinkedin,
+} from "react-icons/fi";
+import { MdEmail } from "react-icons/md";
+
 
 const softSkills = [
     {
@@ -63,32 +71,30 @@ export function AboutSection() {
         <Stack>
             <VStack
                 id="about-section"
-                h={"full"}
-                gap={24}
-                w={"full"}
-                minH="100vh"
-                bgImage={`url(${BgHero})`}
-                bgSize="cover"
-                position="center"
-                bgRepeat="no-repeat"
+                h="full"
+                w="full"
                 bgColor="#000319"
+                bgImage={`url(${BgHero})`}
+                px={{ base: "1rem", md: "0rem" }}
             >
                 <Flex
-                    w="70em"
                     h="full"
-                    py="5rem"
-                    px="10rem"
-                    gap={"7rem"}
                     rounded="xl"
+                    align="center"
                     border="1px solid"
-                    justify="space-between"
                     bgGradient="to-br"
-                    gradientFrom="#04071D"
                     gradientTo="#0C0E23"
+                    justify="space-between"
+                    gradientFrom="#04071D"
                     borderColor="gray.100/10"
+                    w={{ base: "full", md: "70em" }}
+                    py={{ base: "2rem", md: "5em" }}
+                    px={{ base: "1rem", md: "10em" }}
+                    gap={{ base: "2rem", md: "7em" }}
+                    flexDir={{ base: "column-reverse", md: "row" }}
                 >
-                    <Flex flexDir="column" justify="center" gap={"20px"} >
-                        <Heading fontWeight={"normal"}>
+                    <Flex flexDir="column" align={{ base: "center", md: "start" }} justify="center" gap={"20px"} >
+                        <Heading fontWeight={"Semibold "}>
                             Egwaldino Cassuente
                         </Heading>
                         <Text fontWeight={"light"} textAlign={"justify"}>
@@ -102,6 +108,23 @@ export function AboutSection() {
                             de forma prática e entregar código limpo,
                             claro e eficiente
                         </Text>
+                        <HStack gap={4}>
+                            <Link textDecor="none" href="https://www.instagram.com/egwaldinocassuente.ao?igsh=YW96NWF5N2U3ZHRr&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                                <Icon as={FiInstagram} boxSize={6} color="#CBACF9" />
+                            </Link>
+                            <Link textDecor="none" href="https://github.com/egwaldino" target="_blank" rel="noopener noreferrer">
+                                <Icon as={FiGithub} boxSize={6} color="#CBACF9" />
+                            </Link>
+                            <Link textDecor="none" href="https://mail.google.com/mail/?view=cm&fs=1&to=ecassuente@gmail.com&su=Contacto%20Via%20WebSite" target="_blank" rel="noopener noreferrer">
+                                <Icon as={MdEmail} boxSize={6} color="#CBACF9" />
+                            </Link>
+                            <Link textDecor="none" href="https://www.linkedin.com/in/egwaldino-cassuente-5b7712348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
+                                <Icon as={FiLinkedin} boxSize={6} color="#CBACF9" />
+                            </Link>
+                            <Link textDecor="none" href="https://wa.me/351964433241" target="_blank" rel="noopener noreferrer">
+                                <Icon as={FaWhatsapp} boxSize={6} color="#CBACF9" />
+                            </Link>
+                        </HStack>
                     </Flex>
                     <Image
                         w={"250px"}

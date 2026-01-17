@@ -41,13 +41,13 @@ export function TestimonialsSection(): JSX.Element {
   return (
     <Flex
       id="testimonials-section"
-      flexDir="column"
-      align="center"
-      w="full"
       py={24}
+      w="full"
+      align="center"
+      flexDir="column"
       bgColor="#000319"
     >
-      <Heading fontWeight="semibold" fontSize="3xl" mb={12}>
+      <Heading textAlign={"center"} px={{ base: 4, md: 24}} fontWeight="semibold" fontSize="3xl" mb={12}>
         Quem trabalhou comigo <Span color="#CBACF9">diz o seguinte</Span>
       </Heading>
 
@@ -65,18 +65,18 @@ export function TestimonialsSection(): JSX.Element {
           {[...testimonials, ...testimonials].map((card) => (
             <Flex
               key={card.name}
-              w="570px"
+              w={{base: "380px", md: "570px"}}
               p={6}
               gap={6}
               rounded="2xl"
+              flexShrink={0}
               flexDir="column"
               border="1px solid"
               bgGradient="to-br"
               gradientTo="#0C0E23"
+              justify="space-between"
               gradientFrom="#04071D"
               borderColor="whiteAlpha.100"
-              justify="space-between"
-              flexShrink={0}
             >
               <Text fontWeight="light">{card.description}</Text>
 
