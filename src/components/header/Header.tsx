@@ -1,25 +1,16 @@
-import { Button, Flex, Link } from "@chakra-ui/react";
 import type { JSX } from "react";
+import { Button, Flex, Link } from "@chakra-ui/react";
 
 export function Header(): JSX.Element {
   return (
-    <Flex
-      w="full"
-      h="full"
-      py="32px"
-      justify="center"
-      align="center"
-    >
+    <Flex w="full" h="full" py="32px" justify="center">
       <Flex
-        h="42px"
-        px={{base: "", md: "32px"}}
-        py="24px"
+        h="48px"
         rounded="lg"
-        align="center"
         bg="#0C0E23"
         border="1px solid"
-        justify="space-between"
         borderColor="gray.100/10"
+        px={{ base: "", md: "32px" }}
       >
         <Link textDecor="none" rel="noopener noreferrer">
           <Button
@@ -31,7 +22,9 @@ export function Header(): JSX.Element {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
-          >Sobre</Button>
+          >
+            Sobre
+          </Button>
         </Link>
         <Link textDecor="none" rel="noopener noreferrer">
           <Button
@@ -43,7 +36,9 @@ export function Header(): JSX.Element {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
-          >Projetos</Button>
+          >
+            Projetos
+          </Button>
         </Link>
         <Link textDecor="none" rel="noopener noreferrer">
           <Button
@@ -55,7 +50,9 @@ export function Header(): JSX.Element {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
-          >Depoimentos</Button>
+          >
+            Depoimentos
+          </Button>
         </Link>
         <Link textDecor="none" rel="noopener noreferrer">
           <Button
@@ -67,7 +64,9 @@ export function Header(): JSX.Element {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
-          >Contatos</Button>
+          >
+            Contatos
+          </Button>
         </Link>
       </Flex>
     </Flex>
