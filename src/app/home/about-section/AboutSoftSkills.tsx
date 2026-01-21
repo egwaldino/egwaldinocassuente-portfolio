@@ -6,7 +6,7 @@ export function AboutSoftSkills(): JSX.Element {
   return (
     <Flex flexDir="column" pb={20} pt={20}>
       <Flex flexDir="column" align="center">
-        <Heading fontWeight="semibold" fontSize="3xl">
+        <Heading color="white" fontWeight="semibold" fontSize="3xl">
           Soft Skills
         </Heading>
         <Grid

@@ -5,8 +5,8 @@ import { ProjectHeader } from "./ProjectHeader";
 export function ProjectsSection() {
   return (
     <Box
-      w="full"
       py={24}
+      w="full"
       bgColor="#000319"
       id="projects-section"
       px={{ base: 4, md: 24 }}

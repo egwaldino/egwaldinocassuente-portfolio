@@ -4,6 +4,7 @@ export function ProjectHeader() {
   return (
     <Heading
       mb={12}
+      color="white"
       textAlign="center"
       fontWeight={"semibold"}
       fontSize={{ base: "3xl", md: "3xl" }}

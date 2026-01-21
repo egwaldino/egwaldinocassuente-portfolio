@@ -19,6 +19,7 @@ export function HeroSection(): JSX.Element {
         mt={{ base: "6rem", md: "32px" }}
       >
         <Text
+          color="white"
           letterSpacing="0.3rem"
           fontWeight="extralight"
           fontSize={{ base: "xs", md: "sm" }}
@@ -27,6 +28,7 @@ export function HeroSection(): JSX.Element {
         </Text>
 
         <Heading
+          color="white"
           fontWeight="bold"
           lineHeight="shorter"
           px={{ base: "30px" }}
@@ -39,7 +41,7 @@ export function HeroSection(): JSX.Element {
           </Text>
         </Heading>
 
-        <Text fontSize="lg" px={{ base: 5 }}>
+        <Text color="white" fontSize="lg" px={{ base: 5 }}>
           Olá! Eu sou{" "}
           <Span fontWeight={"semibold"} color="#CBACF9">
             Egwaldino,

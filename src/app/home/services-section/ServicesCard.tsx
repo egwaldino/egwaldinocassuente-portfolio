@@ -71,6 +71,7 @@ export function ServicesCard({ service }: ServicesCardProps) {
             <Button
               w="full"
               rounded="xl"
+              color="white"
               variant="outline"
               bgGradient="to-r"
               gradientTo="#0C0E23"

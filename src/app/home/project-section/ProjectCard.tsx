@@ -40,7 +40,7 @@ export function ProjectCard({
         <Image src={image} alt={title} w="100%" />
       </Box>
 
-      <Heading fontSize="lg" mb={2}>
+      <Heading color="white" fontSize="lg" mb={2}>
         {title}
       </Heading>
 

@@ -23,9 +23,12 @@ export function Footer() {
       id="contacts-section"
       px={{ base: 6, md: 12 }}
     >
-      {/* CTA */}
       <Flex direction="column" align="center" textAlign="center" gap={4} mb={6}>
-        <Heading fontSize={{ base: "2xl", md: "3xl" }} fontWeight="semibold">
+        <Heading
+          color="white"
+          fontWeight="semibold"
+          fontSize={{ base: "2xl", md: "3xl" }}
+        >
           Pronto para levar a{" "}
           <Box as="span" color="#CBACF9">
             tua presença digital
@@ -45,6 +48,7 @@ export function Footer() {
             px={10}
             gap={2}
             rounded="lg"
+            color="white"
             display="flex"
             variant="outline"
             bgGradient="to-r"

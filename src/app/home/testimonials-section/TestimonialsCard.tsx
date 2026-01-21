@@ -14,7 +14,6 @@ type TestimonialsCardProps = {
 export function TestimonialsCard({ testimonial }: TestimonialsCardProps) {
   return (
     <Flex
-      w={{ base: "380px", md: "570px" }}
       p={6}
       gap={6}
       rounded="2xl"
@@ -26,8 +25,11 @@ export function TestimonialsCard({ testimonial }: TestimonialsCardProps) {
       justify="space-between"
       gradientFrom="#04071D"
       borderColor="whiteAlpha.100"
+      w={{ base: "380px", md: "570px" }}
     >
-      <Text fontWeight="light">{testimonial.description}</Text>
+      <Text color="white" fontWeight="light">
+        {testimonial.description}
+      </Text>
 
       <Flex align="center" gap={4}>
         <Image
@@ -39,7 +41,7 @@ export function TestimonialsCard({ testimonial }: TestimonialsCardProps) {
         />
 
         <Flex flexDir="column" lineHeight={1.3}>
-          <Text fontWeight="normal" fontSize={15}>
+          <Text color="white" fontWeight="normal" fontSize={15}>
             {testimonial.name}
           </Text>
           <Text color="whiteAlpha.500" fontSize={12}>

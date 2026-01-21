@@ -24,7 +24,7 @@ export function AboutHardSkills(): JSX.Element {
       bgColor="#000319"
     >
       <Flex flexDir="column" align="center" w="full">
-        <Heading fontWeight="semibold" fontSize="3xl">
+        <Heading color="white" fontWeight="semibold" fontSize="3xl">
           Hard Skills
         </Heading>
 

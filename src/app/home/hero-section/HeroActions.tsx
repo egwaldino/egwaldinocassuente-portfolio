@@ -12,6 +12,7 @@ export function HeroActions(): JSX.Element {
           px={4}
           gap={2}
           rounded="lg"
+          color="white"
           display="flex"
           variant="outline"
           bgGradient="to-r"

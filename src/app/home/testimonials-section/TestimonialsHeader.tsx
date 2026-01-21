@@ -4,6 +4,7 @@ export function TestimonialsHeader() {
   return (
     <Heading
       mb={12}
+      color="white"
       fontSize="3xl"
       textAlign="center"
       fontWeight="semibold"

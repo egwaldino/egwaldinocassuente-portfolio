@@ -27,8 +27,10 @@ export function AboutProfile(): JSX.Element {
         flexDir="column"
         align={{ base: "center", md: "start" }}
       >
-        <Heading fontWeight="semibold">Egwaldino Cassuente</Heading>
-        <Text fontWeight={"light"} textAlign={"justify"}>
+        <Heading color="white" fontWeight="semibold">
+          Egwaldino Cassuente
+        </Heading>
+        <Text color="white" fontWeight={"light"} textAlign={"justify"}>
           Sou programador web com foco em construir aplicações rápidas, modernas
           e bem estruturadas. Tenho experiências principalmente com o React,
           Typescript e interfaces escaláveis que unem boa performance e design.
