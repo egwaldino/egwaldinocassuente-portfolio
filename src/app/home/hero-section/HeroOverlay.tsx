@@ -7,8 +7,10 @@ export function HeroOverlay(): JSX.Element {
     <Box position="absolute" top="0" left="0" w="full" h="full" zIndex={0}>
       <Image
         w={"1500px"}
+        loading="eager"
         opacity={"65%"}
         src={OverlayImage}
+        fetchPriority="high"
         alt="Background overlay image Egwaldino Cassuente Web Developer"
         pointerEvents="none"
       />
